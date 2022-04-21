@@ -1,0 +1,13 @@
+@import '../../../assets/style/main.scss';
+input {
+  outline: none;
+  border: none;
+  width: 100%;
+}
+
+.content {
+  display: flex;
+  width: 565px;
+  border: 1px solid $blue-color;
+  border-radius: 4px;
+}

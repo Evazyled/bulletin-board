@@ -1,0 +1,14 @@
+@import '../../../assets/style/main.scss';
+.wrapper {
+  cursor: pointer;
+  background-color: $blue-color;
+  border: none;
+  color: $grey-color;
+  font-size: $text-size;
+  line-height: 24px;
+  font-weight: 500;
+  height: 36px;
+  min-width: 96px;
+  border-radius: 0px 4px 4px 0px;
+  text-align: center;
+}

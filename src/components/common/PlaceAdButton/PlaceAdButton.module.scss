@@ -1,0 +1,11 @@
+@import '../../../assets/style/main.scss';
+
+.wrapper {
+  cursor: pointer;
+  border: none;
+  background-color: $orange-color;
+  height: 36px;
+  border-radius: 4px;
+  min-width: 180px;
+  font-weight: 500;
+}
