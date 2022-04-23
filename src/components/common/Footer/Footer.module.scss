@@ -1,0 +1,28 @@
+@import '../../../assets/style/main.scss';
+
+.footer {
+  background-color: $grey-color;
+  grid-area: footer;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  & span {
+    display: block;
+    opacity: 0.6;
+  }
+  .left {
+    width: 252px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: $black-color;
+  }
+  .center {
+    color: $black-color;
+    opacity: 0.6;
+  }
+}

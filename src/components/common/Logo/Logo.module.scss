@@ -1,0 +1,15 @@
+@import '../../../assets/style/main.scss';
+
+.content {
+  display: flex;
+  align-items: center;
+  color: $lightblack-color;
+  font-family: $text-logo;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  .title {
+    margin-left: 4px;
+  }
+}
