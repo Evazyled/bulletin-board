@@ -8,7 +8,7 @@ import style from './PageWrapper.module.scss';
 const PageWrapper = () => (
   <div className={style.page_wrapper}>
     <Header />
-    <main>
+    <main className={style.content}>
       <Outlet />
     </main>
     <Footer />

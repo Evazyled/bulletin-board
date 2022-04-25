@@ -10,10 +10,14 @@ import style from './Header.module.scss';
 const Header = () => (
   <header className={style.header}>
     <div className={`${style.content}  ${style.container}`}>
-      <Logo />
-      <Search />
-      <PlaceAdButton title="Подать объявление" />
-      <UserStatus />
+      <div className={style.logoAndSearch}>
+        <Logo />
+        <Search />
+      </div>
+      <div className={style.adButtonAndUserStatus}>
+        <PlaceAdButton title="Подать объявление" />
+        <UserStatus />
+      </div>
     </div>
   </header>
 );

@@ -9,4 +9,19 @@
   align-items: center;
   width: 100%;
   height: 100%;
+  justify-content: space-between;
+}
+
+.logoAndSearch {
+  display: flex;
+  width: 760px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.adButtonAndUserStatus {
+  display: flex;
+  width: 285px;
+  justify-content: space-between;
+  align-items: center;
 }
