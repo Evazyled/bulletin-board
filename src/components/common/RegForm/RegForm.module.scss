@@ -1,0 +1,54 @@
+@import '../../../assets/style/main.scss';
+
+.regForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 364px;
+  min-height: 584px;
+  margin-top: 40px;
+  background-color: #fff;
+  .text {
+    margin-bottom: 14px;
+    margin-top: 24px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 18px;
+    color: $title-color;
+  }
+  &__subTitle {
+    color: $title-color;
+    opacity: 0.4;
+  }
+  &__body {
+    width: 100%;
+    padding: 24px;
+    input {
+      background: rgba(42, 47, 55, 0.02);
+      height: 48px;
+    }
+    ul {
+      display: flex;
+      padding: 0;
+      width: 100%;
+      justify-content: space-between;
+      .list__item {
+        width: 50%;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.active_link {
+  display: block;
+  width: 100%;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 20px;
+  color: $blue-color;
+  border-bottom: 2px solid black;
+  padding-bottom: 4px;
+}

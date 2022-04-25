@@ -4,32 +4,20 @@
 
 body {
   color: $text-color;
-  font-family: $text;
+  line-height: $line-height;
   font-size: $text-size;
 }
 * {
   box-sizing: border-box;
 }
-h1,
-h2,
-h3,
-h4,
-ul,
-li,
-p {
-  margin: 0;
-  padding: 0;
-}
+
 h1,
 h2,
 h3,
 h4 {
-  color: $title-color;
-  font-family: $title;
-  font-size: $title-size;
+  padding: 0;
 }
 a {
-  color: $title-color;
   text-decoration: none;
 }
 .container {

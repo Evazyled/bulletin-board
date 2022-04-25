@@ -1,12 +1,6 @@
 import React from 'react';
-import RegistrationForm from '../../common/Form/Form';
+import RegForm from '../../common/RegForm/RegForm';
 
-import style from './AuthPage.module.scss';
-
-const AuthPage = () => (
-  <div className={style.wrapper}>
-    <RegistrationForm />
-  </div>
-);
+const AuthPage = () => <RegForm title="Hello, World" subTitle="Создайте аккаунт" />;
 
 export default AuthPage;
