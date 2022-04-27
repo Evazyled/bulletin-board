@@ -1,0 +1,21 @@
+@import '../../../../assets/style/main.scss';
+.content {
+  a {
+    color: $lightblack-color;
+  }
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60px;
+  cursor: pointer;
+}
+
+.content:hover {
+  a {
+    color: blue;
+  }
+  svg {
+    stroke: blue;
+  }
+}

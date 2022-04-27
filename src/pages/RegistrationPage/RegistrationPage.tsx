@@ -1,8 +1,8 @@
 import React from 'react';
 import { Form, Input, Checkbox } from 'antd';
-import 'antd/dist/antd.css';
-import Button from '../../common/Button/Button';
-import RegForm from '../../common/RegForm/RegForm';
+
+import Button from '../../components/common/Button/Button';
+import RegForm from '../../components/common/RegForm/RegForm';
 
 const RegistrationPage = () => (
   <RegForm title="Hello, World" subTitle="Создайте аккаунт">

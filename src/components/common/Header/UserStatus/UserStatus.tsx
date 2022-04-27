@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import UserStatusIcon from './UserStatusIcon/UserStatus';
 import UserStatusTitle from './UserStatusTitle/UserStatusTitle';
 
-import style from './User.status.module.scss';
+import style from './UserStatus.module.scss';
 
 const UserStatus = () => (
   <div className={style.content}>

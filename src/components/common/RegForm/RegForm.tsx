@@ -1,9 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { Form, Input, Checkbox } from 'antd';
+
 import style from './RegForm.module.scss';
-import 'antd/dist/antd.css';
-import Button from '../Button/Button';
 
 type RegFormPropsType = {
   title: string;

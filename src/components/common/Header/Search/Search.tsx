@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import FoundButton from '../FoundButton/FoundButton';
+import FoundButton from '../../FoundButton/FoundButton';
 import style from './Search.module.scss';
 import SearchIcon from './SearchIcon';
 

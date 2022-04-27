@@ -27,14 +27,9 @@
   &__body {
     width: 100%;
     padding: 24px;
-    input {
-      border: none;
-      outline: none;
-      background: rgba(42, 47, 55, 0.02);
-      height: 48px;
-    }
-    input:focus {
-      border-bottom: 2px solid black;
+    input.ant-input {
+      height: 48px !important;
+      background-color: #000 !important;
     }
   }
 }
