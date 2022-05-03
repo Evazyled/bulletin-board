@@ -6,7 +6,7 @@ import UserStatusTitle from './UserStatusTitle/UserStatusTitle';
 import style from './UserStatus.module.scss';
 
 const UserStatus = () => (
-  <div className={style.content}>
+  <div className={style.userStatus}>
     <UserStatusIcon />
     <NavLink to="/auth">
       <UserStatusTitle title="Войти" />

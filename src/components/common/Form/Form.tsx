@@ -1,18 +1,18 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-import style from './RegForm.module.scss';
+import style from './Form.module.scss';
 
-type RegFormPropsType = {
+type FormPropsType = {
   title: string;
   subTitle: string;
 };
 
-const RegForm: React.FC<RegFormPropsType> = ({ title, subTitle, children }) => (
-  <div className={style.regForm}>
+const Form: React.FC<FormPropsType> = ({ title, subTitle, children }) => (
+  <div className={style.form}>
     <div className={style.text}>
-      <div className={style.regForm__title}>{title}</div>
-      <div className={style.regForm__subTitle}>{subTitle}</div>
+      <div className={style.form__title}>{title}</div>
+      <div className={style.form__subTitle}>{subTitle}</div>
     </div>
     <ul>
       <div className={style.list__item}>
@@ -34,8 +34,8 @@ const RegForm: React.FC<RegFormPropsType> = ({ title, subTitle, children }) => (
         </li>
       </div>
     </ul>
-    <div className={style.regForm__body}>{children}</div>
+    <div className={style.form__body}>{children}</div>
   </div>
 );
 
-export default RegForm;
+export default Form;

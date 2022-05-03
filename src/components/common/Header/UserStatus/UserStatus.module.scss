@@ -1,5 +1,5 @@
 @import '../../../../assets/style/main.scss';
-.content {
+.userStatus {
   a {
     color: $lightblack-color;
   }
@@ -11,11 +11,15 @@
   cursor: pointer;
 }
 
-.content:hover {
+.userStatus:hover {
   a {
     color: blue;
   }
   svg {
     stroke: blue;
   }
+}
+
+.userStatus:hover .userMenu {
+  display: block;
 }
