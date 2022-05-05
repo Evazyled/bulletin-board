@@ -1,6 +1,8 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useRef, useState } from 'react';
 import { FormikErrors, useFormik } from 'formik';
+import { useNavigate } from 'react-router';
+import { NavLink } from 'react-router-dom';
 import Form from './Form';
 import Button from '../Button/Button';
 import style from './Form.module.scss';
@@ -63,9 +65,10 @@ const RegForm = () => {
 
   const [passwordVisible, setPasswordVisible] = useState(false);
   const [checked, setChecked] = useState(false);
-  function chengeCheckbox() {
+  function changeCheckbox() {
     setChecked(!checked);
   }
+  const navigate = useNavigate();
   return (
     <Form title="Hello, World!" subTitle="Создайте аккаунт">
       <form onSubmit={formik.handleSubmit}>
@@ -155,7 +158,19 @@ const RegForm = () => {
             <div>{formik.errors.confirmPassword}</div>
           ) : null}
         </div>
-        <input type="checkbox" checked={checked} onChange={chengeCheckbox} />
+        <div className={style.conditional}>
+          <div className={style.conditional__check}>
+            <input type="checkbox" checked={checked} onChange={changeCheckbox} id="c1" />
+            <label htmlFor="c1" />
+          </div>
+          <div className={style.conditional__text}>
+            Принимаю условия
+            <a href="http://google.com" target="_blank" rel="noopener noreferrer">
+              Пользовательского соглашения
+            </a>
+          </div>
+        </div>
+
         <Button title="Создать аккаунт" disabled={!checked} />
       </form>
     </Form>

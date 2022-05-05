@@ -1,0 +1,19 @@
+@import '../../assets/style/main.scss';
+
+.errorPage {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  h1 {
+    color: $black-color;
+    font-weight: 700;
+    font-size: 24px;
+  }
+  span {
+    display: block;
+    color: $black-color;
+    opacity: 0.8;
+  }
+}

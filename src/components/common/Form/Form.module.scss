@@ -32,6 +32,24 @@
   }
 }
 
+.conditional__check {
+  position: relative;
+}
+.conditional {
+  display: flex;
+  margin-bottom: 30px;
+  align-items: center;
+}
+.conditional__text {
+  display: flex;
+  flex-direction: column;
+  margin-left: 16px;
+  a {
+    color: $blue-color;
+    text-decoration: underline;
+  }
+}
+
 .inputForm {
   margin-bottom: 16px;
   .inputForm__label {
@@ -102,4 +120,61 @@ ul {
   color: $title-color;
   border-bottom: 2px solid rgba($title-color, 0.12);
   padding-bottom: 4px;
+}
+input[type='checkbox']:checked,
+input[type='checkbox']:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+
+input[type='checkbox']:checked + label,
+input[type='checkbox']:not(:checked) + label {
+  display: inline-block;
+  padding-left: 28px;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+input[type='checkbox']:checked + label:before,
+input[type='checkbox']:not(:checked) + label:before {
+  content: '';
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 24px;
+  height: 24px;
+  border: 1px solid #dddddd;
+  background-color: $grey-color;
+}
+
+input[type='checkbox']:checked + label:before,
+input[type='checkbox']:not(:checked) + label:before {
+  border-radius: 2px;
+}
+
+input[type='checkbox']:checked + label:after,
+input[type='checkbox']:not(:checked) + label:after {
+  content: '';
+  position: absolute;
+  transition: all 0.2s ease;
+}
+
+input[type='checkbox']:checked + label:after,
+input[type='checkbox']:not(:checked) + label:after {
+  left: 4px;
+  top: 6px;
+  width: 12px;
+  height: 6px;
+  border-radius: 1px;
+  border-left: 4px solid $blue-color;
+  border-bottom: 4px solid $blue-color;
+  transform: rotate(-45deg);
+}
+
+input[type='checkbox']:not(:checked) + label:after {
+  opacity: 0;
+}
+
+input[type='checkbox']:checked + label:after {
+  opacity: 1;
 }
