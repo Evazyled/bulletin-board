@@ -2,9 +2,16 @@ import React from 'react';
 
 import style from './UserMenu.module.scss';
 
-const UserMenu = () => (
-  <div className={style.userMenu}>
-    <div className={`${style.userMenu__item} ${style.userMenu__item__name}`}>
+type UserMenuProps = {
+  active: boolean;
+  setActive: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
+const UserMenu = ({ active, setActive }: UserMenuProps) => (
+  <div
+    className={active ? style.userMenu : style.userMenu__notActive}
+    onMouseLeave={() => setActive(false)}>
+    <div className={`${style.userMenu__item} ${style.userMenu__itemName}`}>
       <div className={style.userName__circle}>ВВ</div>
       <span>Имя</span>
     </div>
