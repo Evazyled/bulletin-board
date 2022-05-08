@@ -1,11 +1,9 @@
 import React from 'react';
-import { boolean } from 'yup';
 import style from './Button.module.scss';
 
 type ButtonPropsType = {
   title: string;
   disabled?: any;
-  isActive?: boolean;
 };
 
 const Button = ({ title, disabled }: ButtonPropsType) => (

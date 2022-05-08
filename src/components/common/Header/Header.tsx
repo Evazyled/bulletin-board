@@ -17,7 +17,10 @@ const Header = () => {
         </div>
         <div className={style.adButtonAndUserStatus}>
           <PlaceAdButton title="Подать объявление" />
-          <UserStatus onMouseEnter={() => setModalActive(true)} />
+          <UserStatus
+            onMouseEnter={() => setModalActive(true)}
+            onClick={() => setModalActive((prev) => !prev)}
+          />
           <UserMenu active={modalActive} setActive={setModalActive} />
         </div>
       </div>

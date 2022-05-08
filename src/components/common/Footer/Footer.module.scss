@@ -11,6 +11,7 @@
   width: 100%;
   height: 100%;
   justify-content: space-between;
+  font-size: 12px;
   & span {
     display: block;
     opacity: 0.6;
@@ -38,5 +39,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 674px;
+  max-width: 674px;
+}
+
+@media screen and (max-width: 768px) {
+  .leftAndCenter {
+    max-width: 450px;
+  }
 }

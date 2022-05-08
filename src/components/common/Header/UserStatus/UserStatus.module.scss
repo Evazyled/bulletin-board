@@ -11,15 +11,6 @@
   cursor: pointer;
 }
 
-.userStatus:hover {
-  a {
-    color: blue;
-  }
-  svg {
-    stroke: blue;
-  }
-}
-
 .userStatus:hover .userMenu {
   display: block;
 }

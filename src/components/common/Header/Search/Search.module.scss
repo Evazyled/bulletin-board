@@ -17,3 +17,9 @@ input {
   color: black;
   padding-left: 8px;
 }
+
+@media screen and (max-width: 768px) {
+  .content {
+    width: 286px;
+  }
+}
