@@ -1,5 +1,5 @@
 @import '../../../../assets/style/main.scss';
-.userStatus__active {
+.userStatus {
   a {
     color: $lightblack-color;
   }
@@ -7,10 +7,18 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 60px;
+  min-width: 60px;
   cursor: pointer;
 }
 
-.userStatus:hover .userMenu {
-  display: block;
+@media screen and (min-width: 768px) {
+  .burger {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .userStatus {
+    margin-left: 28px;
+  }
 }
