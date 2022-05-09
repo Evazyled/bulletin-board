@@ -2,6 +2,9 @@
 .userStatus {
   a {
     color: $lightblack-color;
+    &:hover {
+      color: $blue-color;
+    }
   }
 
   display: flex;
