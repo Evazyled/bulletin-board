@@ -1,0 +1,24 @@
+@import '../../assets/style/main.scss';
+
+.banner {
+  width: 100%;
+  background-color: #fff;
+  &__content {
+    padding: 100px;
+  }
+}
+
+.banner__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: $black-color;
+  }
+  p {
+    width: 400px;
+    font-size: 16px;
+  }
+}

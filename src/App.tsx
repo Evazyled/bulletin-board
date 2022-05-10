@@ -10,6 +10,7 @@ import RegistrationPage from './pages/RegistrationPage/RegistrationPage';
 import ErrorPage from './pages/ErrorPage/ErrorPage';
 import AdminAdvertisementPage from './pages/AdminAdvertisementPage/AdvertisementPage';
 import AdminHOC from './hoc/AdminHOC';
+import MainPage from './pages/MainPage/MainPage';
 
 const App = () => (
   <Routes>
@@ -17,6 +18,7 @@ const App = () => (
       <Route path="/registration" element={<RegistrationPage />} />
       <Route path="/auth" element={<AuthPage />} />
       <Route path="*" element={<ErrorPage />} />
+      <Route index element={<MainPage />} />
     </Route>
     <Route
       path="/adminAdvertisementPage"

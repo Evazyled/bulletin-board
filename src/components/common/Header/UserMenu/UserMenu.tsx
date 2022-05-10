@@ -37,7 +37,7 @@ const UserMenu = ({ active, setActive }: UserMenuProps) => (
           strokeLinejoin="round"
         />
       </svg>
-      <span>Мои объвления</span>
+      <span>Мои объявления</span>
     </div>
     <div className={style.userMenu__item}>
       <svg
