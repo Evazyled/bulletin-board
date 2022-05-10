@@ -16,6 +16,16 @@
     margin-top: 24px;
     text-align: center;
   }
+  ul {
+    display: flex;
+    padding: 0;
+    width: 100%;
+    justify-content: space-between;
+    .list__item {
+      width: 50%;
+      text-align: center;
+    }
+  }
 
   &__title {
     font-weight: 700;
@@ -86,17 +96,6 @@
   }
   .input__error {
     border: 1px solid red;
-  }
-}
-
-ul {
-  display: flex;
-  padding: 0;
-  width: 100%;
-  justify-content: space-between;
-  .list__item {
-    width: 50%;
-    text-align: center;
   }
 }
 
