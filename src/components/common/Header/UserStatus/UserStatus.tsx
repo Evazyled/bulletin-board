@@ -13,47 +13,42 @@ const UserStatus = ({ onMouseEnter }: any) => {
 
   return (
     <div className={style.userStatus} onMouseEnter={onMouseEnter}>
-      <div
-        onMouseEnter={() => setIsActive(true)}
-        className={style.userStatus}
-        onMouseLeave={() => setIsActive(false)}>
-        <UserStatusIcon active={isActive} setActive={setIsActive} />
+      <UserStatusIcon />
 
-        <UserStatusTitle title={isAuth ? 'Профиль' : 'Войти'} />
-        <NavLink to="/auth">
-          <svg
-            className={style.burger}
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg">
-            <g opacity="0.4">
-              <path
-                d="M3 12H21"
-                stroke="#2A2F37"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M3 6H21"
-                stroke="#2A2F37"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M3 18H21"
-                stroke="#2A2F37"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </g>
-          </svg>
-        </NavLink>
-      </div>
+      <UserStatusTitle title={isAuth ? 'Профиль' : 'Войти'} />
+      <NavLink to="/auth">
+        <svg
+          className={style.burger}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <g opacity="0.4">
+            <path
+              d="M3 12H21"
+              stroke="#2A2F37"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+            <path
+              d="M3 6H21"
+              stroke="#2A2F37"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+            <path
+              d="M3 18H21"
+              stroke="#2A2F37"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </g>
+        </svg>
+      </NavLink>
     </div>
   );
 };

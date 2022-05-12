@@ -1,8 +1,14 @@
 @import '../../../../assets/style/main.scss';
 .userStatus {
   color: $lightblack-color;
+  svg {
+    stroke: #2c2d2e;
+  }
   &:hover {
     color: $blue-color;
+    svg {
+      stroke: $blue-color;
+    }
   }
 
   position: relative;

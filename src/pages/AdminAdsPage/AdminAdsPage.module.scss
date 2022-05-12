@@ -41,6 +41,7 @@
   svg {
     margin-right: 12px;
   }
+
   &__item {
     display: flex;
     align-items: center;
@@ -48,8 +49,16 @@
     background-color: #fff;
     padding: 24px 0 24px 24px;
     border-bottom: 1px solid rgba(42, 47, 55, 0.1);
+
     &:hover {
       color: $blue-color;
+      svg {
+        stroke: $blue-color;
+      }
+      border-left: 2px solid $blue-color;
+    }
+    svg {
+      stroke: #2c2d2e;
     }
     cursor: pointer;
     .title {
