@@ -34,10 +34,16 @@ a {
 .navMenu {
   display: flex;
   align-items: center;
+  justify-content: space-evenly;
+
+  max-width: 950px;
+  flex-grow: 1;
   margin-top: 40px;
   margin-bottom: 80px;
-  a:hover {
+  a {
     padding: 8px 24px;
+  }
+  a:hover {
     border-radius: 35px;
     border: 1px solid $blue-color;
     color: $blue-color;
@@ -49,13 +55,12 @@ a {
       color: $black-color;
     }
     border-radius: 35px;
-    padding: 8px 24px;
     background-color: #ffac28;
   }
-  li {
-    margin-right: 40px;
-    &:last-child {
-      margin-right: 0;
-    }
-  }
+  // li {
+  //   margin-right: 40px;
+  //   &:last-child {
+  //     margin-right: 0;
+  //   }
+  // }
 }

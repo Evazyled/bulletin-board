@@ -3,7 +3,7 @@ import React from 'react';
 import { Navigate } from 'react-router';
 
 const AdminHOC: React.FC = ({ children }) => {
-  const isAdmin = false;
+  const isAdmin = true;
   if (isAdmin) {
     return <>{children}</>;
   }

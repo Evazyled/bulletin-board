@@ -15,14 +15,12 @@ const Header = () => {
           <Logo />
           <Search />
         </div>
-        <div className={style.adButtonAndUserStatus}>
-          <PlaceAdButton title="Подать объявление" />
-          <UserStatus
-            onMouseEnter={() => setModalActive(true)}
-            onClick={() => setModalActive((prev) => !prev)}
-          />
-          <UserMenu active={modalActive} setActive={setModalActive} />
-        </div>
+        <PlaceAdButton title="Подать объявление" />
+        <UserStatus
+          onMouseEnter={() => setModalActive(true)}
+          // onClick={() => setModalActive((prev) => !prev)}
+        />
+        <UserMenu active={modalActive} setActive={setModalActive} />
       </div>
     </header>
   );

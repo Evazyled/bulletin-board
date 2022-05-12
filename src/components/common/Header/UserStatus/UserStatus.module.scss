@@ -1,12 +1,11 @@
 @import '../../../../assets/style/main.scss';
 .userStatus {
-  a {
-    color: $lightblack-color;
-    &:hover {
-      color: $blue-color;
-    }
+  color: $lightblack-color;
+  &:hover {
+    color: $blue-color;
   }
 
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -17,6 +16,11 @@
 @media screen and (min-width: 768px) {
   .burger {
     display: none;
+  }
+}
+@media screen and (width: 768px) {
+  .burger {
+    display: block;
   }
 }
 

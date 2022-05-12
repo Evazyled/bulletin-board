@@ -27,25 +27,22 @@ const MainPage = () => (
           </NavLink>
         </li>
         <li>
-          <NavLink to="/">Вся доска</NavLink>
+          <NavLink to="/">Автомобили</NavLink>
         </li>
         <li>
-          <NavLink to="allBoard">Вся доска</NavLink>
+          <NavLink to="allBoard">Аксессуары</NavLink>
         </li>
         <li>
-          <NavLink to="allBoard">Вся доска</NavLink>
+          <NavLink to="allBoard">Мебель</NavLink>
         </li>
         <li>
-          <NavLink to="allBoard">Вся доска</NavLink>
+          <NavLink to="allBoard">Спорт</NavLink>
         </li>
         <li>
-          <NavLink to="allBoard">Вся доска</NavLink>
+          <NavLink to="allBoard">Техника</NavLink>
         </li>
         <li>
-          <NavLink to="allBoard">Вся доска</NavLink>
-        </li>
-        <li>
-          <NavLink to="allBoard">Вся доска</NavLink>
+          <NavLink to="allBoard">Товары для дома</NavLink>
         </li>
       </ul>
     </nav>

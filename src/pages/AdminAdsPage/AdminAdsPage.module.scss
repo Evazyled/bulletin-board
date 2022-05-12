@@ -1,0 +1,79 @@
+@import '../../assets/style/main.scss';
+
+.adminAdsPage {
+  width: 100%;
+  display: flex;
+  margin-top: 40px;
+  justify-content: space-between;
+  .ads {
+    width: 867px;
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      span {
+        display: block;
+      }
+      .count {
+        color: $black-color;
+        opacity: 0.6;
+      }
+      button {
+        width: 129px;
+        height: 40px;
+        border-radius: 4px;
+        background-color: $blue-color;
+        color: #fff;
+      }
+    }
+    &__title {
+      font-weight: 700;
+      color: $black-color;
+      font-size: 24px;
+    }
+  }
+}
+
+.adminSidebar {
+  width: 263px;
+  span {
+    display: block;
+  }
+  svg {
+    margin-right: 12px;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    color: $title-color;
+    background-color: #fff;
+    padding: 24px 0 24px 24px;
+    border-bottom: 1px solid rgba(42, 47, 55, 0.1);
+    &:hover {
+      color: $blue-color;
+    }
+    cursor: pointer;
+    .title {
+      color: $title-color;
+      font-weight: 700;
+      font-size: 16px;
+    }
+    .subTitle {
+      color: $title-color;
+      opacity: 0.6;
+      font-size: 12px;
+    }
+  }
+  .letter {
+    width: 40px;
+    height: 40px;
+    background: rgba(42, 47, 55, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 24px;
+    color: $title-color;
+    opacity: 0.4;
+    margin-right: 16px;
+  }
+}

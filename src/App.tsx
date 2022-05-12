@@ -8,7 +8,7 @@ import AuthPage from './pages/AuthPage/AuthPage';
 
 import RegistrationPage from './pages/RegistrationPage/RegistrationPage';
 import ErrorPage from './pages/ErrorPage/ErrorPage';
-import AdminAdvertisementPage from './pages/AdminAdvertisementPage/AdvertisementPage';
+import AdminAdsPage from './pages/AdminAdsPage/AdminAdsPage';
 import AdminHOC from './hoc/AdminHOC';
 import MainPage from './pages/MainPage/MainPage';
 
@@ -19,15 +19,15 @@ const App = () => (
       <Route path="/auth" element={<AuthPage />} />
       <Route path="*" element={<ErrorPage />} />
       <Route index element={<MainPage />} />
+      <Route
+        path="/adminAdsPage"
+        element={
+          <AdminHOC>
+            <AdminAdsPage />
+          </AdminHOC>
+        }
+      />
     </Route>
-    <Route
-      path="/adminAdvertisementPage"
-      element={
-        <AdminHOC>
-          <AdminAdvertisementPage />
-        </AdminHOC>
-      }
-    />
   </Routes>
 );
 
