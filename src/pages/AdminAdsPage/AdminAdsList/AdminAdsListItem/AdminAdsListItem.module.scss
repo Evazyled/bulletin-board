@@ -1,0 +1,15 @@
+.adminAdsListItem {
+  li {
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    height: 80px;
+    padding: 24px 28px;
+    background-color: #fff;
+    span {
+      display: block;
+      flex-grow: 1;
+    }
+  }
+}
