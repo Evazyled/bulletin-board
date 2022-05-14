@@ -10,11 +10,8 @@ const AdHeader = () => {
     <header className={style.header}>
       <div className={`${style.content}  ${style.container}`}>
         <Logo />
-        <UserStatus
-          onMouseEnter={() => setModalActive(true)}
-          onClick={() => setModalActive((prev) => !prev)}
-        />
-        <UserMenu active={modalActive} setActive={setModalActive} />
+        <UserStatus />
+        <UserMenu />
       </div>
     </header>
   );

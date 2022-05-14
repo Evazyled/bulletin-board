@@ -91,6 +91,12 @@ const AdminAdsPage = () => {
               dataPublication="12 апреля 2022"
               isPublication
             />
+            <AdminAdsListItem
+              name="Чепчик"
+              category="Одежда"
+              dataPublication="12 апреля 2022"
+              isPublication
+            />
           </ul>
         </div>
       </div>

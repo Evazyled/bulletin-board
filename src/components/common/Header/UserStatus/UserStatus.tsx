@@ -6,13 +6,14 @@ import UserStatusIcon from './UserStatusIcon/UserStatusIcon';
 import UserStatusTitle from './UserStatusTitle/UserStatusTitle';
 
 import style from './UserStatus.module.scss';
+import UserMenu from '../UserMenu/UserMenu';
 
 const UserStatus = ({ onMouseEnter }: any) => {
-  const isAuth = false;
+  const isAuth = true;
   const [isActive, setIsActive] = useState(false);
 
   return (
-    <div className={style.userStatus} onMouseEnter={onMouseEnter}>
+    <div className={style.userStatus}>
       <UserStatusIcon />
 
       <UserStatusTitle title={isAuth ? 'Профиль' : 'Войти'} />

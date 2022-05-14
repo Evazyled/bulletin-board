@@ -7,12 +7,10 @@ type UserMenuProps = {
   setActive: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-const UserMenu = ({ active, setActive }: UserMenuProps) => {
+const UserMenu = () => {
   const isAdmin = false;
   return (
-    <div
-      className={active ? style.userMenu : style.userMenu__notActive}
-      onMouseLeave={() => setActive(false)}>
+    <div className={style.userMenu}>
       <div className={`${style.userMenu__item} ${style.userMenu__itemName}`}>
         <div className={style.userName__circle}>ВВ</div>
         <span>Имя</span>
