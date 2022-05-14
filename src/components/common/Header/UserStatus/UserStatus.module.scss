@@ -1,17 +1,22 @@
 @import '../../../../assets/style/main.scss';
 .userStatus {
   color: $lightblack-color;
+  position: relative;
+  height: 50px;
   svg {
     stroke: #2c2d2e;
   }
   &:hover {
+    display: block;
     color: $blue-color;
     svg {
       stroke: $blue-color;
     }
+    & > div[class*='userMenu'] {
+      display: block;
+    }
   }
 
-  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;

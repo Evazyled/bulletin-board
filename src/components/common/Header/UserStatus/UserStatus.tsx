@@ -15,7 +15,6 @@ const UserStatus = ({ onMouseEnter }: any) => {
   return (
     <div className={style.userStatus}>
       <UserStatusIcon />
-
       <UserStatusTitle title={isAuth ? 'Профиль' : 'Войти'} />
       <NavLink to="/auth">
         <svg
@@ -50,6 +49,7 @@ const UserStatus = ({ onMouseEnter }: any) => {
           </g>
         </svg>
       </NavLink>
+      <UserMenu />
     </div>
   );
 };

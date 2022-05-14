@@ -15,7 +15,6 @@ const Header = () => (
       </div>
       <PlaceAdButton title="Подать объявление" />
       <UserStatus />
-      <UserMenu />
     </div>
   </header>
 );
