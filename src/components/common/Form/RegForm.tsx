@@ -1,8 +1,8 @@
+/* eslint-disable no-unused-expressions */
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { FormikErrors, useFormik } from 'formik';
-import { useNavigate } from 'react-router';
-import { NavLink } from 'react-router-dom';
+
 import Form from './Form';
 import Button from '../Button/Button';
 import style from './Form.module.scss';
@@ -17,26 +17,22 @@ interface FormValues {
 }
 
 const RegForm = () => {
-  const validate = (values: FormValues) => {
+  const validate = (values: any) => {
     const errors: FormikErrors<FormValues> = {};
     if (!values.firstName) {
-      errors.firstName = 'Required';
-    } else if (values.firstName.length > 15) {
-      errors.firstName = 'Must be 15 characters or less';
+      errors.firstName = 'Поле Имя обязательно';
     }
 
     if (!values.lastName) {
-      errors.lastName = 'Required';
-    } else if (values.lastName.length > 20) {
-      errors.lastName = 'Must be 20 characters or less';
+      errors.lastName = 'Поле Фамилия обязательно';
     }
     if (!values.password) {
-      errors.password = 'Required';
+      errors.password = 'Введите пароль';
     } else if (values.password.length < 10) {
-      errors.password = 'Пароль должен больше 10 символов';
+      errors.password = 'Пароль должен содержать больше 10 символов';
     }
     if (!values.confirmPassword) {
-      errors.confirmPassword = 'Required';
+      errors.confirmPassword = 'Повторите введённый пароль';
     } else if (values.confirmPassword.length < 10) {
       errors.confirmPassword = 'Пароли должны совпадать';
     }
@@ -44,7 +40,7 @@ const RegForm = () => {
       errors.confirmPassword = 'Пароли должны совпадать';
     }
     if (!values.email) {
-      errors.email = 'Required';
+      errors.email = 'Поле Email обязательно';
     } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
       errors.email = 'Invalid email address';
     }
@@ -68,7 +64,7 @@ const RegForm = () => {
   function changeCheckbox() {
     setChecked(!checked);
   }
-  const navigate = useNavigate();
+
   return (
     <Form title="Hello, World!" subTitle="Создайте аккаунт">
       <form onSubmit={formik.handleSubmit}>
