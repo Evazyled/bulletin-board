@@ -26,7 +26,47 @@
       }
     }
     svg {
+      height: 24px;
+      width: 24px;
+
       cursor: pointer;
+    }
+  }
+}
+.three__dots {
+  position: relative;
+  &:hover .three__dots__dropdown {
+    display: block;
+  }
+}
+.three__dots__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: rgba(44, 45, 46, 0.04);
+}
+
+.three__dots__dropdown {
+  display: none;
+  position: absolute;
+  left: -200px;
+  width: 242px;
+  background-color: #fff;
+  padding: 16px 0;
+  border: 1px solid rgba(44, 45, 46, 0.08);
+  .dropdown__menu__item {
+    display: flex;
+    padding: 16px 0;
+    color: $black-color;
+    &:hover {
+      background: rgba(44, 45, 46, 0.08);
+    }
+    svg {
+      stroke: #2c2d2e;
+      margin-left: 24px;
+      margin-right: 12px;
     }
   }
 }

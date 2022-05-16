@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import adminIcon from '../../../../assets/icons/userMenuAdmin.svg';
 import style from './UserMenu.module.scss';
 
@@ -16,7 +16,7 @@ const UserMenu = () => {
         <div className={style.userName__circle}>ВВ</div>
         <span>Имя</span>
       </div>
-      <NavLink to="/adminAdsPage">
+      <Link to="/adminAdsPage">
         <div className={style.userMenu__item}>
           <svg
             width="20"
@@ -41,7 +41,7 @@ const UserMenu = () => {
           </svg>
           <span>Мои объявления</span>
         </div>
-      </NavLink>
+      </Link>
       <div className={style.userMenu__item}>
         <svg
           width="20"

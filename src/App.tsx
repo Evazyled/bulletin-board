@@ -1,18 +1,14 @@
 /* eslint-disable react/jsx-wrap-multilines */
 import React from 'react';
-
 import { Route, Routes } from 'react-router';
-
-import * as Yup from 'yup';
-import { withFormik, FormikProps, FormikErrors, Form, Field } from 'formik';
 import PageWrapper from './components/common/PageWrapper/PageWrapper';
 import AuthPage from './pages/AuthPage/AuthPage';
-
 import RegistrationPage from './pages/RegistrationPage/RegistrationPage';
 import ErrorPage from './pages/ErrorPage/ErrorPage';
 import AdminAdsPage from './pages/AdminAdsPage/AdminAdsPage';
 import AdminHOC from './hoc/AdminHOC';
 import MainPage from './pages/MainPage/MainPage';
+import EditingPage from './pages/EditingPage/EditingPage';
 
 const App = () => (
   <Routes>
@@ -26,6 +22,14 @@ const App = () => (
         element={
           <AdminHOC>
             <AdminAdsPage />
+          </AdminHOC>
+        }
+      />
+      <Route
+        path="/editingPage"
+        element={
+          <AdminHOC>
+            <EditingPage />
           </AdminHOC>
         }
       />
