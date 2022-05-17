@@ -8,7 +8,7 @@ import ErrorPage from './pages/ErrorPage/ErrorPage';
 import AdminAdsPage from './pages/AdminAdsPage/AdminAdsPage';
 import AdminHOC from './hoc/AdminHOC';
 import MainPage from './pages/MainPage/MainPage';
-import EditingPage from './pages/EditingPage/EditingPage';
+import AdEditingPage from './pages/EditingPage/EditingPage';
 
 const App = () => (
   <Routes>
@@ -29,7 +29,7 @@ const App = () => (
         path="/editingPage"
         element={
           <AdminHOC>
-            <EditingPage />
+            <AdEditingPage />
           </AdminHOC>
         }
       />
