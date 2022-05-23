@@ -42,6 +42,54 @@ const AdEditingPage = () => (
               <span>Чепчик</span>
             </div>
           </div>
+          <div className={style.params__ad}>
+            <div className={style.params__ad__item}>
+              <span>Категория</span>
+              <div className={style.select__wrapper}>
+                <select>
+                  <option value="1" selected>
+                    Детская одежда
+                  </option>
+                </select>
+                <svg
+                  width="14"
+                  height="8"
+                  viewBox="0 0 14 8"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M1 1L7 7L13 1"
+                    stroke="#2A2F37"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div className={style.params__ad__item}>
+              <span>Стоимость</span>
+              <div className={style.bg}>
+                <input value="15000" />
+              </div>
+            </div>
+            <div className={style.params__ad__item}>
+              <span>Дата публикации</span>
+              <div className={style.bg}>
+                <input type="datetime-local" />
+              </div>
+            </div>
+            <div className={style.params__ad__item}>
+              <span>Телефон</span>
+              <div className={style.bg}>
+                <input type="tel" id="phone" name="phone" pattern="[+]{1}[0-9]{11,14}" required />
+              </div>
+            </div>
+          </div>
+          <div className={style.params__ad__textarea}>
+            <span>Описание</span>
+            <textarea placeholder="Введите текст (до 3000 символов)" />
+          </div>
         </form>
       </div>
     </div>

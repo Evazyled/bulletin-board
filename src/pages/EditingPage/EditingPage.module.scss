@@ -42,15 +42,16 @@
   margin-top: 19px;
   background-color: #fff;
   padding: 32px 24px;
+  span {
+    display: block;
+    color: $title-color;
+    font-weight: 700;
+    opacity: 0.6;
+    margin-bottom: 8px;
+  }
   .form__productName {
     width: 100%;
-    & > span {
-      display: block;
-      color: $title-color;
-      font-weight: 700;
-      opacity: 0.6;
-      margin-bottom: 8px;
-    }
+
     &__content {
       height: 64px;
       padding: 20px 24px;
@@ -62,6 +63,70 @@
         font-size: 16px;
         color: $title-color;
       }
+    }
+  }
+}
+
+.params__ad {
+  margin-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.params__ad__item {
+  margin-bottom: 24px;
+}
+
+.select__wrapper {
+  position: relative;
+  width: 398px;
+  height: 64px;
+  background: rgba(42, 47, 55, 0.02);
+  border-radius: 4px;
+
+  svg {
+    display: block;
+    top: 29px;
+    right: 29px;
+
+    pointer-events: none;
+    position: absolute;
+  }
+  select {
+    background: none;
+    display: block;
+    width: 100%; /* от ширины блока div */
+    appearance: none; /* убираем дефолнтные стрелочки */
+    border: none;
+    padding: 20px 24px;
+    font-size: 16px;
+  }
+}
+.bg {
+  input {
+    background: transparent;
+  }
+  font-size: 16px;
+  width: 398px;
+  height: 64px;
+  background: rgba(42, 47, 55, 0.02);
+  border-radius: 4px;
+  padding: 20px 24px;
+}
+
+.params__ad__textarea {
+  textarea {
+    width: 100%;
+    font-size: 16px;
+    height: 128px;
+    background: rgba(42, 47, 55, 0.02);
+    border-radius: 4px;
+    padding: 20px 24px;
+    border: none;
+    resize: none;
+    &::placeholder {
+      opacity: 0.6;
     }
   }
 }
