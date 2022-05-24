@@ -47,11 +47,12 @@
     color: $title-color;
     font-weight: 700;
     opacity: 0.6;
-    margin-bottom: 8px;
   }
   .form__productName {
     width: 100%;
-
+    span {
+      opacity: 1;
+    }
     &__content {
       height: 64px;
       padding: 20px 24px;
@@ -113,6 +114,7 @@
   background: rgba(42, 47, 55, 0.02);
   border-radius: 4px;
   padding: 20px 24px;
+  margin-top: 8px;
 }
 
 .params__ad__textarea {
@@ -129,4 +131,92 @@
       opacity: 0.6;
     }
   }
+}
+
+.params__ad__photo .bg,
+.params__ad__loc .bg,
+.params__ad__publication .bg {
+  width: 100%;
+}
+.params__ad__publication {
+  .custom__radio {
+    span {
+      opacity: 1;
+      font-weight: 400;
+    }
+  }
+}
+
+.checked__pablication {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  button {
+    background: transparent;
+    font-size: 16px;
+    opacity: 0.4;
+  }
+}
+
+.radio__button {
+  display: flex;
+  width: 240px;
+  justify-content: space-between;
+}
+
+.custom__radio [type='radio']:checked,
+.custom__radio [type='radio']:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+
+.custom__radio [type='radio']:checked + .custom__radio__label,
+.custom__radio [type='radio']:not(:checked) + .custom__radio__label {
+  position: relative;
+  padding: 6px 0 4px 38px;
+  cursor: pointer;
+  line-height: 20px;
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
+.custom__radio [type='radio']:checked + .custom__radio__label:before,
+.custom__radio [type='radio']:not(:checked) + .custom__radio__label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 24px;
+  height: 24px;
+  border: 1px solid $title-color;
+  opacity: 0.2;
+  border-radius: 100%;
+  background: #fff;
+}
+
+.custom__radio [type='radio']:checked + .custom__radio__label:after,
+.custom__radio [type='radio']:not(:checked) + .custom__radio__label:after {
+  content: '';
+  width: 12px;
+  height: 12px;
+  background: blue;
+  position: absolute;
+  top: 7px;
+  left: 7px;
+
+  border-radius: 100%;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.custom__radio [type='radio']:not(:checked) + .custom__radio__label:after {
+  opacity: 0;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+
+.custom__radio [type='radio']:checked + .custom__radio__label:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
 }
