@@ -2,6 +2,10 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import style from './MainPage.module.scss';
 import img from '../../assets/image/banner-img.jpg';
+import AdCard from './AdCardList/AdCard/AdCard';
+import { data } from '../../helpers/index';
+import AdCardList from './AdCardList/AdCardList';
+// import AdCardList from './AdCardList/AdCardList';
 
 const MainPage = () => (
   <div className={style.mainPage}>
@@ -46,6 +50,12 @@ const MainPage = () => (
         </li>
       </ul>
     </nav>
+
+    <div className={`${style.adsList} ${style.container}`}>
+      <h3>Вся лента</h3>
+
+      <AdCardList data={data} />
+    </div>
   </div>
 );
 

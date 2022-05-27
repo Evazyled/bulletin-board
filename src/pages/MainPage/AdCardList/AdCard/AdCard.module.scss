@@ -1,0 +1,66 @@
+@import '../../../../assets/style/main.scss';
+.adCard {
+  width: 363px;
+  // height: 448px;
+  cursor: pointer;
+  border-radius: 4px;
+  span {
+    display: block;
+    color: $title-color;
+  }
+  &__image {
+    position: relative;
+    height: 200px;
+    span {
+      position: absolute;
+      bottom: 16px;
+      left: 16px;
+      padding: 4px 16px;
+      color: #fff;
+      background-color: $blue-color;
+    }
+  }
+  &__text {
+    padding: 24px;
+    background-color: #fff;
+    .title,
+    .price {
+      font-weight: 700;
+      font-size: 18px;
+      margin-bottom: 16px;
+    }
+
+    .description {
+      width: 200px;
+      opacity: 0.8;
+      margin-bottom: 40px;
+    }
+    .price {
+      text-align: right;
+      margin-bottom: 28px;
+    }
+  }
+  &:hover {
+    box-shadow: 0px 8px 36px rgba(42, 47, 55, 0.06);
+  }
+  &:hover {
+    .title {
+      color: $blue-color;
+    }
+  }
+}
+
+.dateAndCount {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: $title-color;
+  opacity: 0.4;
+  .view {
+    display: flex;
+    align-items: center;
+    svg {
+      margin-right: 9px;
+    }
+  }
+}
