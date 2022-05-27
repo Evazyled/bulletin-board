@@ -64,3 +64,12 @@ a {
   //   }
   // }
 }
+
+.adsList {
+  h3 {
+    font-weight: 700;
+    font-size: 24px;
+    color: $title-color;
+    margin-bottom: 40px;
+  }
+}
