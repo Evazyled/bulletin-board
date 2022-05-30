@@ -9,6 +9,7 @@ import AdminAdsPage from './pages/AdminAdsPage/AdminAdsPage';
 import AdminHOC from './hoc/AdminHOC';
 import MainPage from './pages/MainPage/MainPage';
 import AdEditingPage from './pages/EditingPage/EditingPage';
+import OneAdPage from './pages/OneAdPage/OneAdPage';
 
 const App = () => (
   <Routes>
@@ -33,6 +34,7 @@ const App = () => (
           </AdminHOC>
         }
       />
+      <Route path="oneAdPage" element={<OneAdPage />} />
     </Route>
   </Routes>
 );
