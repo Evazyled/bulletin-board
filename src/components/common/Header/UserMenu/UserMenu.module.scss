@@ -45,3 +45,14 @@
 .userMenu__notActive {
   display: none;
 }
+
+@media screen and (max-width: 768px) {
+  .userMenu {
+    height: 100vh;
+    width: 100vw;
+    left: 0;
+    top: 70px;
+    z-index: 1000;
+    background-color: #fff;
+  }
+}

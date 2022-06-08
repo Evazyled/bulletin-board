@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Map from '../../components/common/Map/Map';
 import style from './OneAdPage.module.scss';
 
 const OneAdPage = () => (
@@ -62,6 +63,9 @@ const OneAdPage = () => (
         <button type="button" className={style.viewNumber}>
           Показать номер
         </button>
+      </div>
+      <div className={style.map}>
+        <Map />
       </div>
     </div>
   </div>

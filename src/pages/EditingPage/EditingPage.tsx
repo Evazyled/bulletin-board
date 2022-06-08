@@ -5,6 +5,7 @@ import { UploadOutlined } from '@ant-design/icons';
 import { Button, Upload } from 'antd';
 import style from './EditingPage.module.scss';
 import AdminSidebar from '../../components/common/AdminSidebar/AdminSideBar';
+import Map from '../../components/common/Map/Map';
 
 const AdEditingPage = () => {
   const props = {
@@ -118,6 +119,7 @@ const AdEditingPage = () => {
               <div className={style.bg}>
                 <input placeholder="Введите адрес" />
               </div>
+              <Map />
             </div>
             <div className={style.params__ad__publication}>
               <span>Публикация</span>
