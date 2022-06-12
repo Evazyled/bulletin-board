@@ -4,7 +4,6 @@ import PlaceAdButton from '../PlaceAdButton/PlaceAdButton';
 import Search from './Search/Search';
 import UserStatus from './UserStatus/UserStatus';
 import style from './Header.module.scss';
-import UserMenu from './UserMenu/UserMenu';
 
 const Header = () => (
   <header className={style.header}>

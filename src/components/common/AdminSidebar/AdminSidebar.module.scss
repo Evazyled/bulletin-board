@@ -18,13 +18,6 @@
     padding: 24px 0 24px 24px;
     border-bottom: 1px solid rgba(42, 47, 55, 0.1);
 
-    &:hover {
-      color: $blue-color;
-      svg {
-        stroke: $blue-color;
-      }
-    }
-
     svg {
       stroke: #2c2d2e;
     }
@@ -40,9 +33,7 @@
       font-size: 12px;
     }
   }
-  & > &__item:not(:first-child):hover {
-    border-left: 2px solid $blue-color;
-  }
+
   .letter {
     width: 40px;
     height: 40px;
@@ -56,4 +47,32 @@
     opacity: 0.4;
     margin-right: 16px;
   }
+}
+
+.active__link {
+  display: flex;
+  align-items: center;
+  color: $title-color;
+  background-color: #fff;
+  padding: 24px 0 24px 24px;
+  border-bottom: 1px solid rgba(42, 47, 55, 0.1);
+
+  .letter {
+    width: 40px;
+    height: 40px;
+    background: rgba(42, 47, 55, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 24px;
+    color: $title-color;
+    opacity: 0.4;
+    margin-right: 16px;
+  }
+  color: $blue-color;
+  svg {
+    stroke: $blue-color;
+  }
+  border-left: 2px solid $blue-color;
 }
