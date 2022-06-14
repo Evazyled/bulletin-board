@@ -34,7 +34,7 @@ const App = () => (
           </AdminHOC>
         }
       />
-      <Route path="oneAdPage" element={<OneAdPage />} />
+      <Route path="/:category/:title" element={<OneAdPage />} />
     </Route>
   </Routes>
 );

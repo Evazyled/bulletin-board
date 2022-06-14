@@ -9,7 +9,7 @@ import UserStatusTitle from './UserStatusTitle/UserStatusTitle';
 import style from './UserStatus.module.scss';
 
 const UserStatus = () => {
-  const isAuth = false;
+  const isAuth = true;
   const isAdmin = false;
   const [isOpenUserMenu, setIsOpenUserMenu] = useState(false);
   const [isOpenAuth, setIsOpenAuth] = useState(false);

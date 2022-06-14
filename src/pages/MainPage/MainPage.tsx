@@ -5,7 +5,6 @@ import img from '../../assets/image/banner-img.jpg';
 import AdCard from './AdCardList/AdCard/AdCard';
 import { data } from '../../helpers/index';
 import AdCardList from './AdCardList/AdCardList';
-// import AdCardList from './AdCardList/AdCardList';
 
 const MainPage = () => (
   <div className={style.mainPage}>
@@ -34,7 +33,10 @@ const MainPage = () => (
           <NavLink to="/">Автомобили</NavLink>
         </li>
         <li>
-          <NavLink to="allBoard">Аксессуары</NavLink>
+          <NavLink to="/">Аксессуары</NavLink>
+        </li>
+        <li>
+          <NavLink to="/odezhda">Одежда</NavLink>
         </li>
         <li>
           <NavLink to="allBoard">Мебель</NavLink>
