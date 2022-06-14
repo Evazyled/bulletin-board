@@ -1,3 +1,4 @@
+/* eslint-disable no-nested-ternary */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useEffect, useState } from 'react';
@@ -8,9 +9,10 @@ import UserStatusTitle from './UserStatusTitle/UserStatusTitle';
 import style from './UserStatus.module.scss';
 
 const UserStatus = () => {
-  const isAuth = true;
+  const isAuth = false;
   const isAdmin = false;
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpenUserMenu, setIsOpenUserMenu] = useState(false);
+  const [isOpenAuth, setIsOpenAuth] = useState(false);
   const navigate = useNavigate();
 
   return (
@@ -18,8 +20,8 @@ const UserStatus = () => {
       <div className={style.info}>
         <div className={style.svg}>
           <svg
-            onClick={() => setIsOpen(false)}
-            className={isOpen ? style.cross : style.none}
+            onClick={() => setIsOpenUserMenu(false)}
+            className={isOpenUserMenu ? style.cross : style.none}
             width="24"
             height="24"
             viewBox="0 0 24 24"
@@ -42,9 +44,40 @@ const UserStatus = () => {
               />
             </g>
           </svg>
+          {isOpenAuth ? (
+            <NavLink to="/">
+              <svg
+                className={isOpenAuth ? style.cross : style.none}
+                onClick={() => setIsOpenAuth(false)}
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <g opacity="0.4">
+                  <path
+                    d="M21 3L3 21"
+                    stroke="#2C2D2E"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M3 3L21 21"
+                    stroke="#2C2D2E"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </g>
+              </svg>
+            </NavLink>
+          ) : (
+            ''
+          )}
           {isAuth ? (
             <svg
-              className={isOpen ? style.none : style.manIcon}
+              className={isOpenUserMenu ? style.none : style.manIcon}
               width="24"
               height="24"
               viewBox="0 0 24 24"
@@ -67,6 +100,8 @@ const UserStatus = () => {
                 />
               </g>
             </svg>
+          ) : isOpenAuth ? (
+            ''
           ) : (
             <svg
               className={style.lock}
@@ -106,7 +141,7 @@ const UserStatus = () => {
           {isAuth ? (
             <svg
               className={style.burger}
-              onClick={() => setIsOpen(true)}
+              onClick={() => setIsOpenUserMenu(true)}
               width="24"
               height="24"
               viewBox="0 0 24 24"
@@ -137,38 +172,40 @@ const UserStatus = () => {
               </g>
             </svg>
           ) : (
-            <svg
-              className={style.burger}
-              onClick={() => setIsOpen(true)}
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <g opacity="0.4">
-                <path
-                  d="M3 12H21"
-                  stroke="#2A2F37"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M3 6H21"
-                  stroke="#2A2F37"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M3 18H21"
-                  stroke="#2A2F37"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </g>
-            </svg>
+            <NavLink to="/auth">
+              <svg
+                className={style.burger}
+                onClick={() => setIsOpenAuth(true)}
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <g opacity="0.4">
+                  <path
+                    d="M3 12H21"
+                    stroke="#2A2F37"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M3 6H21"
+                    stroke="#2A2F37"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M3 18H21"
+                    stroke="#2A2F37"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </g>
+              </svg>
+            </NavLink>
           )}
 
           <NavLink to="/auth">
@@ -282,7 +319,7 @@ const UserStatus = () => {
               </div>
             </div>
           </div>
-          <div className={isOpen ? style.userMenu__mobile : style.none}>
+          <div className={isOpenUserMenu ? style.userMenu__mobile : style.none}>
             <div className={`${style.userMenu__item} ${style.userMenu__itemName}`}>
               <div className={style.userName__circle}>ВВ</div>
               <span>Имя</span>
@@ -291,7 +328,7 @@ const UserStatus = () => {
               <div
                 className={style.userMenu__item}
                 onClick={() => {
-                  setIsOpen(false);
+                  setIsOpenUserMenu(false);
                 }}>
                 <svg
                   width="20"
