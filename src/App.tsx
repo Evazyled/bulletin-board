@@ -5,11 +5,14 @@ import PageWrapper from './components/common/PageWrapper/PageWrapper';
 import AuthPage from './pages/AuthPage/AuthPage';
 import RegistrationPage from './pages/RegistrationPage/RegistrationPage';
 import ErrorPage from './pages/ErrorPage/ErrorPage';
-import AdminAdsPage from './pages/AdminAdsPage/AdminAdsPage';
+import AdminAdsPage from './pages/AdsPage/AdminAdsPage';
 import AdminHOC from './hoc/AdminHOC';
 import MainPage from './pages/MainPage/MainPage';
-import AdEditingPage from './pages/EditingPage/EditingPage';
 import OneAdPage from './pages/OneAdPage/OneAdPage';
+import List from './pages/MainPage/List';
+import AdminAdEditingPage from './pages/EditingPage/AdminEditingPage';
+import UserAdsPage from './pages/AdsPage/UserAdsPage';
+import UserAdEditingPage from './pages/EditingPage/UserEditingPage';
 
 const App = () => (
   <Routes>
@@ -17,7 +20,10 @@ const App = () => (
       <Route path="/registration" element={<RegistrationPage />} />
       <Route path="/auth" element={<AuthPage />} />
       <Route path="*" element={<ErrorPage />} />
-      <Route index element={<MainPage />} />
+      <Route path="/" element={<MainPage />}>
+        <Route path="/list" element={<List />} />
+      </Route>
+
       <Route
         path="/adminAdsPage"
         element={
@@ -27,13 +33,15 @@ const App = () => (
         }
       />
       <Route
-        path="/editingPage"
+        path="/adminEditingPage"
         element={
           <AdminHOC>
-            <AdEditingPage />
+            <AdminAdEditingPage />
           </AdminHOC>
         }
       />
+      <Route path="/userAdsPage" element={<UserAdsPage />} />
+      <Route path="/userEditingPage" element={<UserAdEditingPage />} />
       <Route path="/:category/:title" element={<OneAdPage />} />
     </Route>
   </Routes>

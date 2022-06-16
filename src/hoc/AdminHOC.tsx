@@ -4,6 +4,7 @@ import { Navigate } from 'react-router';
 
 const AdminHOC: React.FC = ({ children }) => {
   const isAdmin = true;
+  const isAuth = false;
   if (isAdmin) {
     return <>{children}</>;
   }

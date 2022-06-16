@@ -1,0 +1,222 @@
+@import '../../assets/style/main.scss';
+
+.editingPage {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.edetingOneAd {
+  width: 867px;
+  &__header {
+    .comeback {
+      display: inline-flex;
+      align-items: center;
+      background: transparent;
+      color: $title-color;
+      svg {
+        margin-right: 13px;
+      }
+    }
+  }
+}
+
+.header__adName {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 32px;
+  padding: 20px 28px;
+  background-color: #fff;
+  button {
+    width: 147px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: $blue-color;
+    color: #fff;
+  }
+}
+
+.adEditingPage__form {
+  margin-top: 19px;
+  background-color: #fff;
+  padding: 32px 24px;
+  span {
+    display: block;
+    color: $title-color;
+    font-weight: 700;
+    opacity: 0.6;
+  }
+  .form__productName {
+    width: 100%;
+    span {
+      opacity: 1;
+    }
+    &__content {
+      height: 64px;
+      padding: 20px 24px;
+      background-color: rgba(42, 47, 55, 0.02);
+      border-radius: 4px;
+      border: 1px solid rgba(42, 47, 55, 0.08);
+      border-bottom: 2px solid $blue-color;
+      & > span {
+        font-size: 16px;
+        color: $title-color;
+      }
+    }
+  }
+}
+
+.params__ad {
+  margin-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.params__ad__item {
+  margin-bottom: 24px;
+}
+
+.select__wrapper {
+  position: relative;
+  width: 398px;
+  height: 64px;
+  background: rgba(42, 47, 55, 0.02);
+  border-radius: 4px;
+
+  svg {
+    display: block;
+    top: 29px;
+    right: 29px;
+
+    pointer-events: none;
+    position: absolute;
+  }
+  select {
+    background: none;
+    display: block;
+    width: 100%; /* от ширины блока div */
+    appearance: none; /* убираем дефолнтные стрелочки */
+    border: none;
+    padding: 20px 24px;
+    font-size: 16px;
+  }
+}
+.bg {
+  input {
+    background: transparent;
+  }
+  font-size: 16px;
+  width: 398px;
+  height: 64px;
+  background: rgba(42, 47, 55, 0.02);
+  border-radius: 4px;
+  padding: 20px 24px;
+  margin-top: 8px;
+}
+
+.params__ad__textarea {
+  textarea {
+    width: 100%;
+    font-size: 16px;
+    height: 128px;
+    background: rgba(42, 47, 55, 0.02);
+    border-radius: 4px;
+    padding: 20px 24px;
+    border: none;
+    resize: none;
+    &::placeholder {
+      opacity: 0.6;
+    }
+  }
+}
+
+.params__ad__photo .bg,
+.params__ad__loc .bg,
+.params__ad__publication .bg {
+  width: 100%;
+}
+.params__ad__publication {
+  .custom__radio {
+    span {
+      opacity: 1;
+      font-weight: 400;
+    }
+  }
+}
+
+.checked__pablication {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  button {
+    background: transparent;
+    font-size: 16px;
+    opacity: 0.4;
+  }
+}
+
+.radio__button {
+  display: flex;
+  width: 240px;
+  justify-content: space-between;
+}
+
+.custom__radio [type='radio']:checked,
+.custom__radio [type='radio']:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+
+.custom__radio [type='radio']:checked + .custom__radio__label,
+.custom__radio [type='radio']:not(:checked) + .custom__radio__label {
+  position: relative;
+  padding: 6px 0 4px 38px;
+  cursor: pointer;
+  line-height: 20px;
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
+.custom__radio [type='radio']:checked + .custom__radio__label:before,
+.custom__radio [type='radio']:not(:checked) + .custom__radio__label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 24px;
+  height: 24px;
+  border: 1px solid $title-color;
+  opacity: 0.2;
+  border-radius: 100%;
+  background: #fff;
+}
+
+.custom__radio [type='radio']:checked + .custom__radio__label:after,
+.custom__radio [type='radio']:not(:checked) + .custom__radio__label:after {
+  content: '';
+  width: 12px;
+  height: 12px;
+  background: blue;
+  position: absolute;
+  top: 7px;
+  left: 7px;
+
+  border-radius: 100%;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.custom__radio [type='radio']:not(:checked) + .custom__radio__label:after {
+  opacity: 0;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+
+.custom__radio [type='radio']:checked + .custom__radio__label:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}

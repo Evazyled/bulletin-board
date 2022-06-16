@@ -2,21 +2,22 @@
 /* eslint-disable react/jsx-one-expression-per-line */
 import React, { useState } from 'react';
 import AddButton from '../../components/common/AdButton/AddButton';
-import AdminSidebar from '../../components/common/AdminSidebar/AdminSideBar';
-import AdminAdsListItem from './AdminAdsList/AdminAdsListItem/AdminAdsListItem';
-import style from './AdminAdsPage.module.scss';
+import UserSidebar from '../../components/common/Sidebar/UserSidebar';
 
-const AdminAdsPage = () => {
+import AdsListItem from './AdsList/AdsListItem/AdsListItem';
+import style from './AdsPage.module.scss';
+
+const UserAdsPage = () => {
   const [countAds, setCountAds] = useState(45);
 
   return (
     <div className={`${style.adminAdsPage} ${style.container}`}>
-      <AdminSidebar />
+      <UserSidebar />
       <div className={style.ads}>
         <div className={style.ads__header}>
           <div className={style.ads__left}>
             <span className={style.ads__title}>Объявления</span>
-            <span className={style.count}>Всего : {countAds}</span>
+            <span className={style.count}>Всего :{countAds}</span>
           </div>
           <AddButton />
         </div>
@@ -170,7 +171,7 @@ const AdminAdsPage = () => {
             <div className={style.params__item}>Публикация</div>
           </div>
           <ul>
-            <AdminAdsListItem
+            <AdsListItem
               name="Чепчик"
               category="Одежда"
               dataPublication="12 апреля 2022"
@@ -189,4 +190,4 @@ const AdminAdsPage = () => {
   );
 };
 
-export default AdminAdsPage;
+export default UserAdsPage;
