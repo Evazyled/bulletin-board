@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import AdCard from './AdCard/AdCard';
+import style from './AdCardList.module.scss';
 
 type AdCardListPropsType = {
   data: {
@@ -18,7 +19,7 @@ type AdCardListPropsType = {
 const AdCardList = ({ data, sep }: AdCardListPropsType) => {
   const [cat, setcat] = useState('Вся доска');
   return (
-    <ul>
+    <ul className={style.adsList}>
       {data.map((el) => {
         if (sep === 'Вся доска') {
           return (

@@ -1,6 +1,10 @@
 /* eslint-disable import/prefer-default-export */
 import wash from '../assets/image/wash.png';
 import pinkHat from '../assets/image/girl-with-pink-hat.png';
+import tolstovka from '../assets/image/tolstovka.png';
+import bicycle from '../assets/image/bicycle.png';
+import headphones from '../assets/image/headphones.png';
+import cofemachine from '../assets/image/cofemachine.png';
 
 export const data = [
   {
@@ -20,6 +24,76 @@ export const data = [
     title: 'Шапочка',
     description: 'Шапочка детская на ребенка 7-10 лет. 60% шерст, 40% вискоза',
     price: '500',
+    date: '14 апреля 2021',
+    views: 356,
+  },
+  {
+    id: 3,
+    image: tolstovka,
+    category: 'Одежда',
+    title: 'Толстовка',
+    description: 'Новая толстовка белая без принта с карманом',
+    price: '2 000',
+    date: '14 апреля 2021',
+    views: 356,
+  },
+  {
+    id: 4,
+    image: bicycle,
+    category: 'Спорт',
+    title: 'Велосипед',
+    description: 'Велосипед в отличном состоянии. Ретро-стиль',
+    price: '28 000',
+    date: '14 апреля 2021',
+    views: 356,
+  },
+  {
+    id: 5,
+    image: headphones,
+    category: 'Техника',
+    title: 'Наушники',
+    description: 'Наушники почти новые. Срок эксплуатации - меньше месяца',
+    price: '4 500',
+    date: '14 апреля 2021',
+    views: 356,
+  },
+  {
+    id: 6,
+    image: cofemachine,
+    category: 'Техника',
+    title: 'Кофемашина',
+    description: 'Кофемашина с капучинатором. Пакет кофе 1 кг. - в подарок',
+    price: '8 500',
+    date: '14 апреля 2021',
+    views: 356,
+  },
+  {
+    id: 6,
+    image: cofemachine,
+    category: 'Техника',
+    title: 'Кофемашина',
+    description: 'Кофемашина с капучинатором. Пакет кофе 1 кг. - в подарок',
+    price: '8 500',
+    date: '14 апреля 2021',
+    views: 356,
+  },
+  {
+    id: 6,
+    image: cofemachine,
+    category: 'Техника',
+    title: 'Кофемашина',
+    description: 'Кофемашина с капучинатором. Пакет кофе 1 кг. - в подарок',
+    price: '8 500',
+    date: '14 апреля 2021',
+    views: 356,
+  },
+  {
+    id: 6,
+    image: cofemachine,
+    category: 'Техника',
+    title: 'Кофемашина',
+    description: 'Кофемашина с капучинатором. Пакет кофе 1 кг. - в подарок',
+    price: '8 500',
     date: '14 апреля 2021',
     views: 356,
   },

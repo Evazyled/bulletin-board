@@ -1,9 +1,10 @@
 @import '../../../../assets/style/main.scss';
 .adCard {
   width: 363px;
-  // height: 448px;
+
   cursor: pointer;
   border-radius: 4px;
+  min-height: 448px;
   span {
     display: block;
     color: $title-color;
@@ -32,10 +33,10 @@
     }
 
     .description {
-      text-align: left;
       width: 100%;
       opacity: 0.8;
       margin-bottom: 40px;
+      height: 48px;
     }
     .price {
       text-align: right;
