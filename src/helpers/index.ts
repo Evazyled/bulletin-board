@@ -68,7 +68,7 @@ export const data = [
     views: 356,
   },
   {
-    id: 6,
+    id: 7,
     image: cofemachine,
     category: 'Техника',
     title: 'Кофемашина',
@@ -78,7 +78,7 @@ export const data = [
     views: 356,
   },
   {
-    id: 6,
+    id: 8,
     image: cofemachine,
     category: 'Техника',
     title: 'Кофемашина',
@@ -88,7 +88,7 @@ export const data = [
     views: 356,
   },
   {
-    id: 6,
+    id: 9,
     image: cofemachine,
     category: 'Техника',
     title: 'Кофемашина',

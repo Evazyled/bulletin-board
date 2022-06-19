@@ -23,3 +23,9 @@ input {
     width: 286px;
   }
 }
+
+@media screen and (max-width: 750px) {
+  .content {
+    display: none;
+  }
+}

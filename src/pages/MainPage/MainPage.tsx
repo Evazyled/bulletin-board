@@ -55,10 +55,12 @@ const MainPage = () => {
             <NavLink to="allBoard">Мебель</NavLink>
           </li>
           <li>
-            <NavLink to="allBoard">Спорт</NavLink>
+            <NavLink to="/">Спорт</NavLink>
           </li>
           <li>
-            <NavLink to="allBoard">Техника</NavLink>
+            <NavLink onClick={() => setCat(() => 'Техника')} to="/">
+              Техника
+            </NavLink>
           </li>
           <li>
             <NavLink to="allBoard">Товары для дома</NavLink>
@@ -66,10 +68,11 @@ const MainPage = () => {
         </ul>
       </nav>
 
-      <div className={`${style.adsList} ${style.container}`}>
+      <div className={`${style.adsList} ${style.container} `}>
         <h3>Вся лента</h3>
 
         <AdCardList data={data} sep={cat} />
+
         <div className={style.btn_container}>
           <button className={style.btn_loading} type="button">
             <svg

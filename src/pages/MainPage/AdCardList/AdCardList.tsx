@@ -19,7 +19,7 @@ type AdCardListPropsType = {
 const AdCardList = ({ data, sep }: AdCardListPropsType) => {
   const [cat, setcat] = useState('Вся доска');
   return (
-    <ul className={style.adsList}>
+    <ul className={`${style.adsList} ${style.container}`}>
       {data.map((el) => {
         if (sep === 'Вся доска') {
           return (
