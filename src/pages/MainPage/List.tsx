@@ -1,9 +1,8 @@
 import React from 'react';
 import { Outlet } from 'react-router';
 
-const List = () => (
+const List: React.FC = ({ children }) => (
   <div>
-    <h1>list</h1>
     <Outlet />
   </div>
 );

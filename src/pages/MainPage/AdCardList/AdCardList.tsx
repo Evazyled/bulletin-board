@@ -13,49 +13,25 @@ type AdCardListPropsType = {
     date: string;
     views: number;
   }[];
-  sep: string;
 };
 
-const AdCardList = ({ data, sep }: AdCardListPropsType) => {
+const AdCardList = ({ data }: AdCardListPropsType) => {
   const [cat, setcat] = useState('Вся доска');
   return (
     <ul className={`${style.adsList} ${style.container}`}>
-      {data.map((el) => {
-        if (sep === 'Вся доска') {
-          return (
-            <AdCard
-              key={el.id}
-              id={el.id}
-              image={el.image}
-              category={el.category}
-              title={el.title}
-              description={el.description}
-              price={el.price}
-              date={el.date}
-              views={el.views}
-            />
-          );
-        }
-        if (el.category === sep) {
-          return (
-            <AdCard
-              key={el.id}
-              id={el.id}
-              image={el.image}
-              category={el.category}
-              title={el.title}
-              description={el.description}
-              price={el.price}
-              date={el.date}
-              views={el.views}
-            />
-          );
-        }
-        return null;
-      })}
-      {/* <button type="button" onClick={() => setcat('Одежда')}>
-        button
-      </button> */}
+      {data.map((el) => (
+        <AdCard
+          key={el.id}
+          id={el.id}
+          image={el.image}
+          category={el.category}
+          title={el.title}
+          description={el.description}
+          price={el.price}
+          date={el.date}
+          views={el.views}
+        />
+      ))}
     </ul>
   );
 };

@@ -25,7 +25,7 @@ const AdCard = ({
   views,
 }: AdCardPropsType) => (
   <div className={style.adCard}>
-    <Link to={`${translit(category).toLowerCase()}/${`${translit(title).toLowerCase()}`}`}>
+    <Link to={translit(title).toLowerCase()}>
       <li>
         <div className={style.adCard__image}>
           <img src={image} alt="card " />

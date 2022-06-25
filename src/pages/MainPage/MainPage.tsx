@@ -44,10 +44,7 @@ const MainPage = () => {
             <NavLink to="/">Аксессуары</NavLink>
           </li>
           <li>
-            <NavLink
-              onClick={() => setCat('Одежда')}
-              className={({ isActive }) => (isActive ? style.activeLink : '')}
-              to="/">
+            <NavLink className={({ isActive }) => (isActive ? style.activeLink : '')} to="/odezhda">
               Одежда
             </NavLink>
           </li>
@@ -70,8 +67,9 @@ const MainPage = () => {
 
       <div className={`${style.adsList} ${style.container} `}>
         <h3>Вся лента</h3>
-
-        <AdCardList data={data} sep={cat} />
+        <div>
+          <Outlet />
+        </div>
 
         <div className={style.btn_container}>
           <button className={style.btn_loading} type="button">
