@@ -47,7 +47,6 @@ const App = () => (
       <Route path="/userAdsPage" element={<UserAdsPage />} />
       <Route path="/userEditingPage" element={<UserAdEditingPage />} />
       <Route path="/:category/:title" element={<OneAdPage />} />
-      <Route path="/:title" element={<OneAdPage />} />
     </Route>
   </Routes>
 );
